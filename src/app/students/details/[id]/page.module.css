@@ -1,0 +1,814 @@
+.container {
+	background-color: #fefefe;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+	position: sticky;
+	top: 0;
+	height: 100%;
+	overflow-y: hidden;
+	width: 272.25px;
+	flex-shrink: 0;
+	pointer-events: auto;
+}
+
+.sidebarBackground {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
+
+.sidebarImage {
+	object-fit: cover;
+	transform: rotate(180deg) scaleY(-1);
+}
+
+.logo {
+	position: absolute;
+	top: 2.35%;
+	left: 22.04%;
+	right: 39.66%;
+	bottom: 93.94%;
+	z-index: 1;
+}
+
+.logoContainer {
+	position: absolute;
+	inset: 0 65.9% 30.21% 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logoRotated {
+	width: 35.554px;
+	height: 42px;
+	transform: rotate(180deg);
+	flex-shrink: 0;
+}
+
+.logoImage {
+	width: 100%;
+	height: 100%;
+	max-width: none;
+}
+
+.logoOb {
+	position: absolute;
+	inset: 6.3% 29.17% 27.5% 37.18%;
+}
+
+.logoGroup {
+	position: absolute;
+	inset: 7.94% 0 0 72.89%;
+}
+
+.userSection {
+	position: absolute;
+	top: 24.01%;
+	left: 0.09%;
+	right: 0;
+	bottom: 57.27%;
+	background: rgba(243, 250, 255, 0.7);
+	backdrop-filter: blur(2px);
+	border-top: 1px solid #64748b;
+	border-bottom: 1px solid #64748b;
+	display: flex;
+	flex-direction: column;
+	gap: 56px;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 19px 60px;
+}
+
+.userInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.userName {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	margin: 0;
+	margin-top: 20.5px;
+}
+
+.userAcademy {
+	font-family: 'Pretendard Variable', sans-serif;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 1.7;
+	color: #7f7f7f;
+	margin: 0;
+	margin-top: 49px;
+}
+
+.userActions {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+	align-items: center;
+	width: 100%;
+}
+
+.editInfoButton {
+	background: #dbeafe;
+	border: none;
+	border-radius: 8px;
+	padding: 12px 32px;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 18px;
+	letter-spacing: -0.25px;
+	color: #3b6cff;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.editInfoButton:hover {
+	background: #bfdbfe;
+}
+
+.logoutLink {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 1.7;
+	color: #7f7f7f;
+	text-decoration: underline;
+	text-underline-position: from-font;
+	text-align: center;
+}
+
+.menu {
+	position: absolute;
+	left: 60px;
+	top: 120px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 73px;
+}
+
+.menuItem {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: -0.25px;
+	color: #1e293b;
+	text-decoration: none;
+	cursor: pointer;
+	transition: color 0.2s;
+}
+
+.menuItemActive {
+	color: #3b6cff;
+}
+
+.menuItem:hover {
+	color: #3b6cff;
+}
+
+.helpSection {
+	position: absolute;
+	top: 45.38%;
+	left: 22.04%;
+	right: 45.27%;
+	bottom: 53.08%;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.helpIcon {
+	width: 25px;
+	height: 25px;
+	border-radius: 19px;
+	padding: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.helpText {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	color: #505065;
+}
+
+/* Main Content Styles */
+.mainContent {
+  flex: 1;
+  padding: 72px 154px 72px 390px;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.title {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 42px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	margin: 0 0 24px 0;
+}
+
+/* Tabs */
+.tabsContainer {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+	margin-bottom: 48px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.tab {
+	background: #eff5fa;
+	border-radius: 8px;
+	padding: 12px 16px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.2s;
+	min-width: 160px;
+	border: none;
+}
+
+.tabActive {
+	background: #eff5fa;
+	border: 2px solid #4e5d75;
+}
+
+.tab:hover {
+	background: #e0eef5;
+}
+
+.editButton {
+	background: #ffeaaa;
+	border: none;
+	border-radius: 8px;
+	padding: 12px 16px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	cursor: pointer;
+	transition: background 0.2s;
+	min-width: 160px;
+	margin-left: auto;
+}
+
+.editButton:hover {
+	background: #ffe080;
+}
+
+.editButtonArrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	transform: rotate(270deg);
+}
+
+/* Student Information Section */
+.studentInfoSection {
+	display: flex;
+	gap: 48px;
+	align-items: flex-start;
+	margin-bottom: 80px;
+	flex-wrap: wrap;
+}
+
+.profilePicture {
+	position: relative;
+	width: 208px;
+	height: 208px;
+	flex-shrink: 0;
+	border-radius: 80px;
+	overflow: hidden;
+}
+
+.profileCircle {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.personIcon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.studentDetails {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	flex: 1;
+	min-width: 300px;
+}
+
+.detailRow {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.detailLabel {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	margin: 0;
+}
+
+.detailValue {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	margin: 0;
+}
+
+.phoneNumber {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.7;
+	color: #1a1a1a;
+}
+
+.phoneDivider {
+	width: 8px;
+	height: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Class Enrollment Section */
+.classSection {
+	margin-bottom: 80px;
+}
+
+.sectionTitle {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	margin: 0 0 16px 0;
+}
+
+.classListsContainer {
+	display: flex;
+	gap: 24px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.classList {
+	flex: 1;
+	min-width: 300px;
+}
+
+.classListTitle {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	margin: 0 0 16px 0;
+}
+
+.classListTable {
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid #d9d9d9;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+.classListHeader {
+	display: flex;
+	gap: 56px;
+	align-items: center;
+	padding: 16px;
+	border-bottom: 1px solid #d9d9d9;
+	background: white;
+}
+
+.classListHeaderCell {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	text-align: center;
+	width: 68px;
+	flex-shrink: 0;
+	white-space: pre-wrap;
+	margin: 0;
+}
+
+.classListRow {
+	display: flex;
+	gap: 56px;
+	align-items: center;
+	padding: 16px;
+	border-bottom: 1px solid #d9d9d9;
+	background: white;
+}
+
+.classListCell {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	text-align: center;
+	width: 68px;
+	flex-shrink: 0;
+	white-space: pre-wrap;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 31px;
+}
+
+.classListArrow {
+	width: 68px;
+	height: 31px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.arrowRotated {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: rotate(270deg);
+	width: 24px;
+	height: 24px;
+}
+
+.arrowIcon {
+	width: 100%;
+	height: 100%;
+	max-width: none;
+}
+
+/* Student Name Section */
+.studentNameSection {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+/* Additional Information Section */
+.additionalInfoSection {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.additionalInfoRow {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.birthDate {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.7;
+	color: #1a1a1a;
+}
+
+.schoolInfo {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.7;
+	color: #1a1a1a;
+}
+
+/* Attendance Calendar Section */
+.attendanceCalendarSection {
+	margin-bottom: 80px;
+}
+
+.calendarHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.calendarLegend {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.legendItem {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #1a1a1a;
+}
+
+.legendColor {
+	width: 16px;
+	height: 16px;
+	border-radius: 2px;
+	flex-shrink: 0;
+}
+
+.legendColorAbsent {
+	background: #eff5fa;
+}
+
+.legendColorPresent {
+	background: #ffeaaa;
+}
+
+.legendColorLate {
+	background: #4472ff;
+}
+
+.calendarMonthSelector {
+	background: #eff5fa;
+	border-radius: 8px;
+	padding: 12px 16px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	min-width: 160px;
+}
+
+.calendarArrow {
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+}
+
+.calendarGrid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 8px;
+}
+
+.calendarDay {
+	border-radius: 8px;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	min-height: 120px;
+	aspect-ratio: 1;
+}
+
+.calendarDayAbsent {
+	background: #eff5fa;
+	color: black;
+}
+
+.calendarDayPresent {
+	background: #ffeaaa;
+	color: black;
+}
+
+.calendarDayLate {
+	background: #4472ff;
+	color: white;
+}
+
+.calendarDayOtherMonth {
+	background: #eff5fa;
+}
+
+.calendarDayNumber {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.7;
+	margin: 0;
+	color: inherit;
+}
+
+.calendarDayOtherMonth .calendarDayNumber {
+	color: #7f7f7f;
+}
+
+.calendarDayTime {
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.7;
+	margin: 4px 0 0 0;
+	color: inherit;
+	white-space: pre-wrap;
+}
+
+/* Grade Report Section */
+.gradeReportSection {
+	margin-bottom: 80px;
+}
+
+.gradeReportContainer {
+	width: 100%;
+	border-radius: 8px;
+	padding: 24px;
+}
+
+.gradeReportGraph {
+	width: 100%;
+	height: 400px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.gradeReportGraphContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.gradeReportSvg {
+	width: 100%;
+	max-width: 879px;
+	height: 230px;
+}
+
+.graphBackground {
+	fill: rgba(243, 250, 255, 0.7);
+}
+
+.gridLine {
+	stroke: #cbd5e1;
+	stroke-width: 1;
+}
+
+.graphLine {
+	stroke: #3b6cff;
+	stroke-width: 2;
+	fill: none;
+}
+
+.dataPoint {
+	fill: #ffde87;
+	stroke: #ffde87;
+	stroke-width: 2;
+}
+
+.monthLabelsContainer {
+	position: relative;
+	width: 100%;
+	max-width: 879px;
+	height: 50px;
+	margin-top: 0;
+}
+
+.monthLabel {
+	position: absolute;
+	top: 0;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #1a1a1a;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.monthColumn {
+	fill: rgba(243, 250, 255, 0.7);
+	stroke: #cbd5e1;
+}
+
+/* Payment Section */
+.paymentSection {
+	margin-bottom: 80px;
+	padding: 40px;
+	text-align: center;
+	font-family: 'Pretendard', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	color: #7f7f7f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+	.mainContent {
+		padding-left: 292.25px;
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+
+	.mainContent {
+		padding: 20px;
+	}
+
+	.studentInfoSection {
+		flex-direction: column;
+	}
+
+	.classListsContainer {
+		flex-direction: column;
+	}
+
+	.tabsContainer {
+		flex-direction: column;
+	}
+
+	.tab,
+	.editButton {
+		width: 100%;
+	}
+}

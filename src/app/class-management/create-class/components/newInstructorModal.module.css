@@ -1,0 +1,106 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 50;
+}
+
+.modal {
+  width: 500px;
+  max-width: 100%;
+  background: rgba(243, 250, 255, 0.9);
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -0.25px;
+  color: #1a1a1a;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.25px;
+  color: #1a1a1a;
+}
+
+.input {
+  height: 56px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  border: 1px solid transparent;
+  padding: 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #475569;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.primary {
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 8px;
+  border: none;
+  background: #3b6cff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary {
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 8px;
+  border: none;
+  background: #f8fafc;
+  color: #3b6cff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary:hover {
+  filter: brightness(0.95);
+}
+
+.secondary:hover {
+  filter: brightness(0.97);
+}
+

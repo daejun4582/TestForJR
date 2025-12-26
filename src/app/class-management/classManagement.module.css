@@ -1,0 +1,517 @@
+:root {
+  --card-radius: 4px;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.sidebar {
+  width: 272px;
+  min-height: 100vh;
+  border-right: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 32px 0 48px;
+}
+
+.logo {
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav {
+  padding: 24px 0 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navItem {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--gray-90);
+}
+
+.navActive {
+  color: var(--primary);
+}
+
+.profileCard {
+  margin: 32px 24px 0 24px;
+  padding: 24px;
+  background: var(--surface-tint);
+  border: 1px solid var(--gray-60);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profileName {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.profileOrg {
+  font-size: 17px;
+  color: #7f7f7f;
+}
+
+.profileButton {
+  margin-top: 20px;
+  height: 56px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary-tint);
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout {
+  margin-top: 12px;
+  font-size: 17px;
+  color: #7f7f7f;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.help {
+  margin-top: auto;
+  padding: 16px 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #505065;
+}
+
+.helpIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.main {
+  flex: 1;
+  padding: 20 0 20 200px; /* 272px sidebar + 20px 여유 */
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.main::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--gray-90);
+}
+
+.primaryButton {
+  height: 56px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.plusIcon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search {
+  flex: 1;
+  min-width: 280px;
+  height: 56px;
+  border-radius: 8px;
+  background: var(--gray-20);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  gap: 10px;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-50);
+  outline: none;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: var(--gray-50);
+  flex-shrink: 0;
+  display: block;
+}
+
+.select {
+  height: 56px;
+  border-radius: 8px;
+  background: var(--gray-20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-70);
+}
+
+.selectWide {
+  min-width: 187px;
+}
+
+.selectNarrow {
+  min-width: 118px;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 330px;
+  max-height: 352px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.dropdownList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0 8px 0;
+  max-height: 352px;
+  overflow-y: auto;
+}
+
+.dropdownItem {
+  height: 48px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4b5563;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.dropdownItem:hover {
+  background: #f8fafc;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 359px;
+}
+
+.cardImage {
+  height: 170px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.cardBody {
+  flex: 1;
+  background: rgba(243, 250, 255, 0.7);
+  border-top: 1px solid var(--gray-60);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 24px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+  color: #1a1a1a;
+}
+
+.cardSubtitle {
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-top: 4px;
+}
+
+.arrow {
+  width: 16px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--gray-70);
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  height: 24px;
+  padding: 0 12px;
+  background: var(--primary-tint);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.schedule {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-60);
+  font-size: 16px;
+}
+
+.scheduleItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.divider {
+  width: 1px;
+  height: 16px;
+  background: var(--border);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.labelStrong {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.linkText {
+  color: #056fac;
+}
+
+.strongBlue {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.25px;
+}
+
+.teacher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.pageBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 24px;
+  border: 1px solid transparent;
+  background: #fff;
+  color: var(--gray-70);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pageActive {
+  background: #eff7fa;
+}
+
+.arrowBtn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: var(--gray-70);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    position: static;
+    width: 240px;
+  }
+
+  .main {
+    padding: 48px 24px 80px 288px;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .main {
+    padding: 32px 20px 64px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .select,
+  .search {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,32 @@
+.card {
+  background: rgba(243, 250, 255, 0.7);
+  backdrop-filter: blur(2px);
+  border: 1px solid #64748B;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-top: 1px solid #64748B;
+  padding: 24px;
+  border-radius: 0;
+}
+
+.card.default {
+  background: rgba(243, 250, 255, 0.7);
+}
+
+.card.highlighted {
+  background: #F8FAFC;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .card {
+    padding: 20px;
+  }
+}
+
