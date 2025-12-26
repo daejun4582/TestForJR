@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card } from '@/dashboard/src/components/ui/Card';
 import styles from './WeeklySchedule.module.css';
 
 interface ScheduleItem {
